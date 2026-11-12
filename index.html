@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABYSS SYMPHONY</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <header class="logo">
+      <h1>ABYSS SYMPHONY</h1>
+      <p>AN OCEAN CREATED BY MUSIC</p>
+    </header>
+
+    <section id="tutorial" class="screen">
+      <div id="tutorial-content">
+        <p id="tutorial-message">まだ、ここは静かです。</p>
+        <p id="tap-guide">TAP</p>
+      </div>
+    </section>
+
+    <section id="music-screen" class="screen hidden">
+      <div class="music-content">
+        <p class="step-number">01 / BEGINNING</p>
+        <h2>CREATE NEW LIFE</h2>
+        <p class="music-description">この深海に、最初の音楽を与えてください。</p>
+        <button id="choose-music-button" class="music-button" type="button">
+        <img
+            src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Apple_Music_icon.svg"
+            alt="Apple Music"
+            class="apple-music-logo"
+        >
+        <span>CONNECT TO APPLE MUSIC</span>
+        </button>
+        <input id="music-file" type="file" accept="audio/*" hidden>
+        <p class="music-note">CHOOSE A SONG TO CREATE LIFE</p>
+      </div>
+    </section>
+
+    <section id="ocean-screen" class="screen hidden">
+      <div id="album-container">
+        <div id="album-cover"><p>YOUR MUSIC</p></div>
+        <p id="selected-song-name"></p>
+      </div>
+
+      <div id="particles" aria-hidden="true"></div>
+      <div id="light-orb" aria-hidden="true"></div>
+      <div id="ocean-growth" aria-hidden="true"></div>
+      <div id="ocean-floor" aria-hidden="true"></div>
+
+      <div id="creature" aria-label="深海生物">
+        <div class="creature-fin left-fin"></div>
+        <div class="creature-fin right-fin"></div>
+        <div class="creature-body">
+          <div class="creature-eye left-eye"></div>
+          <div class="creature-eye right-eye"></div>
+          <div class="creature-glow"></div>
+        </div>
+      </div>
+
+      <p id="birth-message">A NEW LIFE HAS BEEN BORN</p>
+      <p id="feed-message" aria-live="polite"></p>
+
+      <div id="ocean-tutorial" class="hidden">
+        <p id="ocean-tutorial-message"></p>
+        <p id="ocean-tutorial-guide">TAP ANYWHERE</p>
+      </div>
+
+      <div id="ocean-intro" class="hidden">
+        <div class="ocean-intro-content">
+          <p class="ocean-intro-eyebrow">YOUR FIRST LIFE HAS BEGUN</p>
+          <h2>YOUR OCEAN,<br>YOUR STORY.</h2>
+          <p class="ocean-intro-description">
+            新しい命が、この海に生まれました。<br>
+            ここからは、あなたの好きな音楽で<br>
+            自分だけの深海をつくっていきましょう。
+          </p>
+          <button id="explore-ocean-button" type="button">LET'S EXPLORE</button>
+          <p class="ocean-intro-caption">この海に、どんな世界をつくりますか？</p>
+        </div>
+      </div>
+
+      <button id="menu-button" class="menu-button hidden" type="button">MENU</button>
+
+      <aside id="menu-panel" class="hidden">
+        <p class="menu-title">DEEP SEA MENU</p>
+        <button id="feed-music-button" type="button">♫ 音楽を与える</button>
+        <button id="close-menu-button" type="button">CLOSE</button>
+      </aside>
+
+      <div id="audio-player">
+        <audio id="music-player" controls></audio>
+      </div>
+    </section>
+
+    <div id="background-glow" aria-hidden="true"></div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/jsmediatags@3.9.7/dist/jsmediatags.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
